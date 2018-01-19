@@ -147,7 +147,7 @@ static char* syscallnames[] = {
 [SYS_sleep]   "sleep",
 [SYS_uptime]  "uptime",
 [SYS_open]    "open",
-[SYS_write]   "write",
+// [SYS_write]   "write",
 [SYS_mknod]   "mknod",
 [SYS_unlink]  "unlink",
 [SYS_link]    "link",
@@ -166,7 +166,7 @@ syscall(void)
   num = curproc->tf->eax;
   
   if(num > 0 && num < NELEM(syscalls) && syscalls[num]) {
-    cprintf("\n%s -> %d\n", syscallnames[num], curproc->pid); // Print the syscalls happening
+    // cprintf("\n%s -> %d\n", syscallnames[num], curproc->pid); // Print the syscalls happening
     curproc->tf->eax = syscalls[num]();
   } else {
     cprintf("%d %s: unknown sys call %d\n",
