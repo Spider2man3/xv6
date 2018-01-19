@@ -89,3 +89,16 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+// the new system call for date
+// return the date and time
+int sys_date(void) {
+  struct rtcdate *r;
+  
+  if (argptr(0, (char**)&r, sizeof(&r)) < 0) {
+    return -1;
+  }
+  
+  cmostime(r);
+  return 0;
+}

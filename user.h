@@ -23,6 +23,7 @@ int getpid(void);
 char* sbrk(int);
 int sleep(int);
 int uptime(void);
+int date(struct rtcdate*); // Add the date system call
 
 // ulib.c
 int stat(char*, struct stat*);
