@@ -175,6 +175,7 @@ UPROGS=\
 	_wc\
 	_zombie\
 	_ezsh\
+	_child\
 
 fs.img: mkfs README $(UPROGS)
 	./mkfs fs.img README $(UPROGS)
