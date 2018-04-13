@@ -174,7 +174,12 @@ UPROGS=\
 	_usertests\
 	_wc\
 	_zombie\
+<<<<<<< HEAD
 	_date\ #Add the date system call
+=======
+	_ezsh\
+	_child\
+>>>>>>> ezsh
 
 fs.img: mkfs README $(UPROGS)
 	./mkfs fs.img README $(UPROGS)
